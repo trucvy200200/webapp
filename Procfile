@@ -1,1 +1,1 @@
-web: gunicorn -c guniconf.py sample-app.wsgi
+web: gunicorn -c guniconf.py CollegeERP.wsgi

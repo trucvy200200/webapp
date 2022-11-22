@@ -9,8 +9,8 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 COPY . .
-RUN chmod g+r -R sample-app/wsgi.py ./welcome
+RUN chmod g+r -R CollegeERP/wsgi.py ./apis ./info
 
 EXPOSE 8000
 
-CMD ["gunicorn", "-c", "guniconf.py", "sample-app.wsgi"]
+CMD ["gunicorn", "-c", "guniconf.py", "CollegeERP.wsgi"]
